@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>Orbitt</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="profile-card">
+        <div class="banner"></div>
+        <div class="avatar-wrapper">
+            <img src="./assets/pfp.jpg" alt="Profile Picture" class="avatar" id="avatar" />
+            <span class="status" id="status-dot"></span>
+        </div>
+        <div class="profile-info">
+            <h3 class="username" id="username">Loading...</h3>
+            <div class="tagline" id="custom-status">Fetching status...</div>
+
+            <div id="spotify-status" class="tagline">
+                <img id="spotify-album" alt="Album Cover" />
+                <span id="spotify-text"></span>
+            </div>
+
+            <div id="game-status" class="tagline"></div>
+            <div class="experience">2 Years of experience.</div>
+        </div>
+        <div class="profile-links">
+            <a href="./index.html">Home</a>
+            
+            <div class="projects-container">
+                <ul id="projects-list" class="projects-dropdown"></ul>
+                <span id="projects-toggle" class="clickable">Projects ▼</span>
+            </div>
+
+            <a href="./extras/extras.html">Extras</a>
+        </div>
+    </div>
+
+    <script src="lanyard.js"></script>
+    <script src="dropdown.js"></script>
+</body>
+</html>
