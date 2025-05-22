@@ -16,7 +16,7 @@ function updateStatus(data) {
     const spotify = data.spotify;
 
     // Username
-    usernameEl.textContent = `${user.username}#${user.discriminator}`;
+    usernameEl.textContent = `${user.username}`;
 
     // Avatar
     avatarImg.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=128`;

@@ -107,9 +107,18 @@ body {
     object-fit: cover;
 }
 
+#spotify-status {
+    display: flex;
+    align-items: center;
+    background-color: #1db95422;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 12px;
+    margin-top: 10px;
+}
+
 #spotify-text {
     font-size: 14px;
-    color: #1DB954;
     font-weight: 600;
 }
 
