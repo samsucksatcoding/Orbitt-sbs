@@ -16,26 +16,37 @@ body {
 }
 
 .profile-card {
-    background-color: #232428;
+    background: linear-gradient(
+      135deg,
+        hsla(256, 56.8%, 41.8%, 1),
+        hsla(252, 83.3%, 7.1%, 1)
+    );
+    color: rgb(25, 0, 128);
+    padding: 20px;
+    border: 5px solid hsla(256, 56.8%, 41.8%, 1);
     border-radius: 8px;
-    overflow: hidden;
-    width: 340px;
     position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    padding-bottom: 20px;
+    padding-top: 70px; /* or more if needed */
+    max-width: 308px;
+    max-height: 448;
 }
 
 .banner {
+    position: absolute;
+    top: 0px;
+    left: 0;
     width: 100%;
     height: 120px;
     background: url('./assets/banner.gif') center/cover no-repeat;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .avatar-wrapper {
     position: absolute;
     top: 75px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 20px; /* align to left padding */
+    transform: none; /* remove translateX */
     width: 96px;
     height: 96px;
 }
@@ -86,6 +97,8 @@ body {
     font-size: 20px;
     font-weight: 600;
     margin-top: 10px;
+    margin-left: 85px;
+    text-align: left;
     color: #fff;
     user-select: text;
 }
@@ -230,4 +243,11 @@ body {
 
 .clickable:hover {
     color: #a6b3ff;
+}
+
+.bio {
+    background-color: hsla(252, 83.3%, 7.1%, 1);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
 }
