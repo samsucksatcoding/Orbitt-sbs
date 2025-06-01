@@ -1,37 +1,63 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-us">
 <head>
-    <meta charset="utf-8" />
-    <title>Orbitt</title>
+    <meta charset="UTF-8" />
+    <title>Orbitt's Webbed Site</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div class="profile-card">
-        <div class="banner"></div>
-        <div class="avatar-wrapper">
-            <img src="./assets/pfp.jpg" alt="Profile Picture" class="avatar" id="avatar" />
-            <span class="status" id="status-dot"></span>
+    <div class="container" style="font-family: 'Ubuntu Mono', monospace;">
+        <div class="left-side">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <a href="./index.html">Home</a>
+                        <a href="./extras/extras.html">Extras</a>                        
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="status">
+                <span id="discord-status">🟢 online</span> -
+                <span id="custom-status">listening to some tunes 🎧</span>
+            </div>
         </div>
-        <div class="profile-info">
-            <h3 class="username" id="username">Loading...</h3>
-            <div class="tagline" id="custom-status">Fetching status...</div>
-                <p style="color: #b9bbbe; text-align: left;">User Bio</p>
-            <div class="tagline">
-            <p class="bio">
-                Depresed Femboy<br>
-                Two Years Coding Experience<br>
-                My website:<br><a class="clickable" href="./index.html">https://orbitt.sbs/</a><br>
-                My extra pages on my site:<br><a class="clickable" href="./extras/extras.html">https://orbitt.sbs/extras/extras</a>
+
+        <div class="main-content">
+            <div class="card" id="home">
+                <h4 class="blocktitle">home</h4>
+                <img src="/assets/banner.gif" alt="horizontal banner" class="horizontal-banner" />
+                <h1 class="bouncecolored float-title">
+                    <span>w</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span><span>!</span>
+                </h1>
+                <p class="twoliner">
+                    i'm orbitt, i like computers, music, coffee, monster, and cats.
+                    the purpose of this website is just for me to practice my skills in html and css to better myself.
+                </p>
+                <p>to the side you will find some random images that may have something to do with me or they may be random.</p>
+            </div>
+
+            <div class="card" id="webrings">
+                <h4 class="blocktitle">Webrings</h4>
+                <hr />
+                <div class="bucket-webring">
+                    <a href="#">← prev</a>
+                    <span class="bucket-center">[ Orbitt's Node ]</span>
+                    <a href="#">next →</a>
+                </div>
+            </div>
+
+            <p class="footer-text">
+                if the site is not showing correctly press ctrl+shift+r<br />
+                hosted on <a href="https://pages.dev">pages.dev</a>
             </p>
-            </div>
-            <div id="spotify-status" class="tagline">
-                <img id="spotify-album" alt="Album Cover" />
-                <span id="spotify-text"></span>
-            </div>
-            <div id="game-status" class="tagline"></div>
+        </div>
+
+        <div class="right-side">
+            <img src="placeholder.png" alt="vertical banner" id="randomised_banner" />
         </div>
     </div>
-    <script src="lanyard.js"></script>
-    <script src="dropdown.js"></script>
 </body>
 </html>
