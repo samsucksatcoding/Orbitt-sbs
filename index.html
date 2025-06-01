@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Orbitt's Webbed Site</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <script defer src="scripts.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
+    <script defer src="lanyard.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"/>
 </head>
 <body>
     <div class="container" style="font-family: 'Ubuntu Mono', monospace;">
         <div class="left-side">
             <div class="navbar">
                 <nav>
+                    <h4>nav $</h4>
                     <ul>
-                        <a href="./index.html">Home</a>
-                        <a href="./extras/extras.html">Extras</a>                        
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./extras/extras.html">Extras</a></li>                        
                     </ul>
                 </nav>
             </div>
 
             <div class="status">
-                <span id="discord-status">🟢 online</span> -
-                <span id="custom-status">listening to some tunes 🎧</span>
+                <p>
+                <span id="discord-status">Loading...</span> -
+                <span id="custom-status">Loading...</span></p>
             </div>
         </div>
 
         <div class="main-content">
             <div class="card" id="home">
                 <h4 class="blocktitle">home</h4>
-                <img src="/assets/banner.gif" alt="horizontal banner" class="horizontal-banner" />
+                <img src="./assets/banner.gif" alt="horizontal banner" class="horizontal-banner" />
                 <h1 class="bouncecolored float-title">
                     <span>w</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span><span>!</span>
                 </h1>
@@ -43,9 +46,11 @@
                 <h4 class="blocktitle">Webrings</h4>
                 <hr />
                 <div class="bucket-webring">
-                    <a href="#">← prev</a>
-                    <span class="bucket-center">[ Orbitt's Node ]</span>
-                    <a href="#">next →</a>
+                    <p>
+                        <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=sam">&lt; Previous</a>
+                        <a href="https://webring.bucketfish.me/redirect.html?to=next&name=sam">Next &gt;</a>
+                        <a href="https://webring.bucketfish.me">Bucket Webring!</a>
+                    </p>
                 </div>
             </div>
 

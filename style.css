@@ -23,30 +23,44 @@ body {
     text-align: left;
 }
 
+.navbar,
+.status {
+    background-color: #181825;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 8px #585b70;
+}
+
 .navbar nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 1rem;
-    background-color: #313244;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .navbar nav ul li a {
     color: #f5c2e7;
     text-decoration: none;
     transition: color 0.2s;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
 }
 
 .navbar nav ul li a:hover {
     color: #b4befe;
+    background-color: #313244;
 }
 
 .status {
     font-size: 1rem;
     color: #a6adc8;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    word-break: break-word;
 }
 
 .main-content {
