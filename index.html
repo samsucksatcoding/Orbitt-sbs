@@ -1,68 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Orbitt's Webbed Site</title>
-    <link rel="stylesheet" href="style.css"/>
-    <script defer src="scripts.js"></script>
-    <script defer src="lanyard.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"/>
-</head>
-<body>
-    <div class="container" style="font-family: 'Ubuntu Mono', monospace;">
-        <div class="left-side">
-            <div class="navbar">
-                <nav>
-                    <h4>nav $</h4>
-                    <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./extras/extras.html">Extras</a></li>                        
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="status">
-                <p>
-                <span id="discord-status">Loading...</span> -
-                <span id="custom-status">Loading...</span></p>
-            </div>
+<html lang="en-US">
+    <head>
+        <title>Orbitt</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="./index.html">Home</a>
+            <a href="./extras/extras.html">Extras</a>
         </div>
 
-        <div class="main-content">
-            <div class="card" id="home">
-                <h4 class="blocktitle">home</h4>
-                <img src="./assets/banner.gif" alt="horizontal banner" class="horizontal-banner" />
-                <h1 class="bouncecolored float-title">
-                    <span>w</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span><span>!</span>
-                </h1>
-                <p class="twoliner">
-                    i'm orbitt, i like computers, music, coffee, monster, and cats.
-                    the purpose of this website is just for me to practice my skills in html and css to better myself.
-                </p>
-                <p>to the side you will find some random images that may have something to do with me or they may be random.</p>
-            </div>
-
-            <div class="card" id="webrings">
-                <h4 class="blocktitle">Webrings</h4>
-                <hr />
-                <div class="bucket-webring">
-                    <p>
-                        <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=sam">&lt; Previous</a>
-                        <a href="https://webring.bucketfish.me/redirect.html?to=next&name=sam">Next &gt;</a>
-                        <a href="https://webring.bucketfish.me">Bucket Webring!</a>
-                    </p>
-                </div>
-            </div>
-
-            <p class="footer-text">
-                if the site is not showing correctly press ctrl+shift+r<br />
-                hosted on <a href="https://pages.dev">pages.dev</a>
+        <div class="card">
+            <p class="cardtitle"><span>Home</span></p>
+            <h1 class="bouncecolored float-title">
+                <span>w</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span><span>!</span>
+            </h1>
+            <p class="twoliner">
+                Heya! I'm Orbitt, I love computers, cats, coffee, monster, thigh highs(I know basic for a femboy), and coding!
             </p>
         </div>
-
-        <div class="right-side">
-            <img src="placeholder.png" alt="vertical banner" id="randomised_banner" />
+        
+        <div class="card">
+            <p class="cardtitle-2"><span>Webrings</span></p>
+            <script src="https://palette.nekoweb.org/pmoring.js" data-type="noir-inverse"></script><hr>
+            <div id="bucketwebring">
+                <a class="webring" href="https://webring.bucketfish.me/redirect.html?to=prev&name=sam">↼ Previous</a>
+                <a class="bouncecolored float-title" href="https://webring.bucketfish.me"><span>✨</span><span>B</span><span>u</span><span>c</span><span>k</span><span>e</span><span>t</span><span class="invisible">.</span><span>W</span><span>e</span><span>b</span><span>r</span><span>i</span><span>n</span><span>g</span><span>!</span><span>✨</span></a>
+                <a class="webring" href="https://webring.bucketfish.me/redirect.html?to=random&name=sam">🎲</a>
+                <a class="webring" href="https://webring.bucketfish.me/redirect.html?to=next&name=sam">Next ⇁</a>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
