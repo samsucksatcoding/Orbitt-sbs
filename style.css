@@ -1,99 +1,55 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100vh;
+body{
+    background-color: #333;
     color: #fff;
-    font: 15px monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: monospace;
+    font-size: 20px;
+    margin: 0;
+    margin-top: 70px;
     user-select: none;
 }
-#particleCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    background: #0d0d0d;
-}
-.card {
-    width: 592px;
-    padding: 48px;
-    border: 1px solid #fff;
-    backdrop-filter: blur(5px);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.card-top {
+img{pointer-events: none;}
+h1{font-size: 60px; margin: 0px;}
+h2{font-size: 55px; margin: 0px;}
+h3{font-size: 50px; margin: 0px;}
+h4{font-size: 45px; margin: 0px;}
+h5{font-size: 40px; margin: 0px;}
+h6{font-size: 25px; margin: 0px;}
+.navbar{
+    background-color: #222;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-bottom: 24px;
+    padding: 10px 20px;
+    position: fixed;
+    width: 98%;
+    top: 0;
+    z-index: 1000;
 }
-.links a {
-    color: #fff;
+.navleft img{
+    height: 40px;
+}
+.navcenter a{
+    color: white;
     text-decoration: none;
-    margin-left: 16px;
-    font-style: normal;
+    font-size: 18px;
 }
-.logo {
-    width: 48px;
-    margin-bottom: 16px;
-}
-.pronouns {
-    background: #555;
+.navright select{
     padding: 5px;
-    border-radius: 20px;
+    font-size: 16px;
 }
-.age {
-    color: #b6b6b6;
+.card{
+    width: 700px;
+    padding: 20px;
+    background-color: #444;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    text-align: center;
 }
-.greyed,
-.lg {
-    color: #6e6e6e;
-    font-style: normal;
-}
-.dg {
-    color: #353535;
-    font-style: normal;
-}
-.card-body {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-.card-body img {
-    flex-shrink: 0;
-    width: 150px;
-    height: auto;
-}
-.text-group {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-.text-group p {
-    margin: 0 0 1em 0;
-}
-button {
-    height: 31px;
-    color: #fff;
-    background-color: #b463ff44;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 15px;
-    transition: all ease 0.5s;
-}
-button:hover {
-    background-color: #d5a8ff44;
-    cursor: pointer;
-    transform: scale(1.01);
-}
-.inline {
-    display: inline-block;
+.profilepicture {
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    border: 5px solid #7439ff;
+    box-shadow: 0 0 15px #7439ff, 0 0 30px #7439ff66;
 }

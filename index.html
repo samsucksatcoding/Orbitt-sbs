@@ -1,56 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
     <head>
-        <meta charset="UTF-8">
-        <!-- Primary Meta Tags -->
         <title>Orbitt</title>
-        <meta name="title" content="Orbitt">
-        <meta name="description" content="A website containing my projects">
-        <!-- Open Graph / Discord / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://orbitt.sbs">
-        <meta property="og:title" content="Orbitt">
-        <meta property="og:description" content="A website containing my projects">
-        <meta property="og:image" content="https://orbitt.sbs/assets/images/banner.png">
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:url" content="https://orbitt.sbs">
-        <meta name="twitter:title" content="Orbitt">
-        <meta name="twitter:description" content="A website containing my projects">
-        <meta name="twitter:image" content="https://orbitt.sbs/assets/images/banner.png">
-        <!-- Rest of website info -->
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-        <script defer src="background.js"></script>
         <script defer src="scripts.js"></script>
     </head>
     <body>
-        <canvas id="particleCanvas"></canvas>
-        <div class="card">
-            <div class="card-top">
-                <img src="./assets/images/logo.png" alt="My logo." class="logo">
-                <div class="links">
-                    <a href="./index.html">home</a>
-                    <a href="./friends.html">friends</a>
-                    <a href="./projects.html">projects</a>
-                    <a href="./extras/extras.html">extras</a>
-                </div>
+        <div class="navbar">
+            <div class="navleft">
+                <img src="./assets/images/logo.png" alt="Logo">
             </div>
-            <div class="card-body">
-                <img src="./assets/images/pfp.jpeg" alt="My PFP">
-                <div class="text-group">
-                    <p>Hi! I'm <em>Sam</em> <span class="pronouns">he/him</span> and I'm <span class="age" id="age">Calculating...
-                    </span> years old.</p>
-                    <p>Welcome to my little website on the internet! I make, bake, and break software <em class="greyed">(and 
-                    sometimes hardware)</em> for the most random projects.</p>
-                    <p>&gt;~&lt; <em class="lg">&gt;-&lt;</em> <em class="dg">&gt;w&lt;</em></p>
-                    <div class="inline">
-                        <button onclick="window.location.href='mailto:hello@orbitt.sbs'"><i class="fa-solid fa-envelope"></i> hello@orbitt.sbs</button>
-                        <button onclick="window.location.href='https://github.com/samsucksatcoding'"><i class="fa-brands fa-github"></i> GitHub</button>
-                        <button onclick="window.location.href='https://discord.com/users/934530409293824020'"><i class="fa-brands fa-discord"></i> Discord</button>
-                    </div>
-                </div>
+            <div class="navcenter">
+                <a href="./index.html">Home</a>
+            </div>
+            <div class="navright">
+                <select name="placeholder" id="placeholder">
+                    <option value="placeholder" selected>Placeholder</option>
+                </select>
             </div>
         </div>
+        <main>
+            <div class="card">
+                <h6 class="cardtitle">
+                    Orbitt
+                </h6>
+                <p>Front-End Web Developer</p>
+                <img src="./assets/images/pfp.jpeg" alt="Profile Picture" class="profilepicture">
+                <p>Orbitt/Sam/Benjamin</p>
+                <hr>
+                <p>I am a <span id="age">Calculating...</span> year old developer my pronouns are
+                    <span class="pronouns">he/him</span> I have <span id="Experience">Calculating...</span> years of experience.
+                </p>
+                <hr>
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGxjdGM2bjIwZzNsdXZ4aWM0bXNzY3hxeDI0Y3hyNjQ4cjdlNXRxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MSuCPXbjiyfPvAf8iJ/giphy.gif" alt="Work In Progress">
+            </div>
+        </main>
     </body>
 </html>
