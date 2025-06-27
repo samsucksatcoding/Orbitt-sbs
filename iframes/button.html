@@ -31,6 +31,11 @@
     width: 88px;
     height: 31px;
     flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  a.orbitt-button:hover {
+    transform: scale(1.1) rotate(25deg);
   }
 
   a.orbitt-button img {
@@ -76,7 +81,6 @@
     background-color: #b68ee3;
   }
 
-  /* 🌒 Custom Scrollbar Styling – Dark Cottagecore Theme */
   ::-webkit-scrollbar {
     height: 8px;
     width: 8px;
@@ -99,7 +103,6 @@
     background-color: #a173c8;
   }
 
-  /* Firefox */
   * {
     scrollbar-width: thin;
     scrollbar-color: #865ba5 #2a203a;
@@ -108,12 +111,21 @@
 </head>
 <body>
 
-  <a href="https://orbitt.sbs/" target="_blank" rel="noopener noreferrer" class="orbitt-button" aria-label="Orbitt website button">
+  <a
+    href="https://orbitt.sbs/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="orbitt-button"
+    aria-label="Orbitt website button"
+    style="transition: transform 0.3s ease;"
+    onmouseover="this.style.transform='scale(1.1) rotate(25deg)'"
+    onmouseout="this.style.transform='scale(1) rotate(0deg)'"
+  >
     <img src="https://orbitt.sbs/assets/images/88x31.png" alt="orbitt button" width="88" height="31" draggable="false" />
   </a>
 
   <div class="button-code" id="buttonCode" title="Button HTML code">
-    &lt;a href="https://orbitt.sbs/"&gt;&lt;img src="https://orbitt.sbs/assets/images/88x31.png" alt="orbitt button" width="88" height="31" /&gt;&lt;/a&gt;
+    &lt;a href="https://orbitt.sbs/" target="_blank" rel="noopener noreferrer" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1) rotate(25deg)'" onmouseout="this.style.transform='scale(1) rotate(0deg)'"&gt;&lt;img src="https://orbitt.sbs/assets/images/button.gif" alt="orbitt button" width="88" height="31" /&gt;&lt;/a&gt;
   </div>
 
   <button class="copy-btn" id="copyBtn" aria-label="Copy button code to clipboard">Copy</button>
