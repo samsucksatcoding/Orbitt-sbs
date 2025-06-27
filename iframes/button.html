@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Orbitt Button</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #2a203a;
+    color: #caa9e0;
+    font-family: Georgia, serif;
+    overflow: hidden;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0 1rem;
+    max-width: 854px;
+    max-height: 120px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  a.orbitt-button {
+    display: inline-block;
+    width: 88px;
+    height: 31px;
+    flex-shrink: 0;
+  }
+
+  a.orbitt-button img {
+    width: 88px;
+    height: 31px;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .button-code {
+    flex-grow: 1;
+    background: #2e2442;
+    border: 1px solid #a173c8;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-family: monospace;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    user-select: all;
+    line-height: 1.2;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  button.copy-btn {
+    flex-shrink: 0;
+    background: #865ba5;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    align-self: center;
+  }
+
+  button.copy-btn:hover {
+    background-color: #b68ee3;
+  }
+
+  /* 🌒 Custom Scrollbar Styling – Dark Cottagecore Theme */
+  ::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #2a203a;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #865ba5;
+    border-radius: 8px;
+    border: 2px solid #2a203a;
+    box-shadow: inset 0 0 5px rgba(138, 77, 204, 0.4);
+    transition: background 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a173c8;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #865ba5 #2a203a;
+  }
+</style>
+</head>
+<body>
+
+  <a href="https://orbitt.sbs/" target="_blank" rel="noopener noreferrer" class="orbitt-button" aria-label="Orbitt website button">
+    <img src="https://orbitt.sbs/assets/images/88x31.png" alt="orbitt button" width="88" height="31" draggable="false" />
+  </a>
+
+  <div class="button-code" id="buttonCode" title="Button HTML code">
+    &lt;a href="https://orbitt.sbs/"&gt;&lt;img src="https://orbitt.sbs/assets/images/88x31.png" alt="orbitt button" width="88" height="31" /&gt;&lt;/a&gt;
+  </div>
+
+  <button class="copy-btn" id="copyBtn" aria-label="Copy button code to clipboard">Copy</button>
+
+<script>
+  const copyBtn = document.getElementById('copyBtn');
+  const buttonCode = document.getElementById('buttonCode').textContent;
+
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(buttonCode).then(() => {
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => (copyBtn.textContent = 'Copy'), 2000);
+    }).catch(() => {
+      copyBtn.textContent = 'Failed to copy';
+      setTimeout(() => (copyBtn.textContent = 'Copy'), 2000);
+    });
+  });
+</script>
+
+</body>
+</html>

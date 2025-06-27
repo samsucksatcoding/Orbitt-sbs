@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>Orbitt extras.</title>
+  <link rel="stylesheet" href="extras.css" />
+  <style>
+    .qrcode-container {
+      max-width: 320px;
+      margin: 40px auto 0;
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: var(--border-radius);
+      border: 1.5px solid var(--input-border);
+      background-color: var(--input-bg);
+      color: var(--text-color);
+      font-size: 1rem;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: var(--accent-color);
+      border: none;
+      border-radius: var(--border-radius);
+      color: var(--bg-color);
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: 600;
+      user-select: none;
+      margin-bottom: 30px;
+    }
+    button:hover {
+      background-color: #9f7aff;
+    }
+    #qr-code {
+      margin: 0 auto;
+      width: 256px;
+      height: 256px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js" defer></script>
+  <script defer>
+    let qrCode;
+    window.addEventListener('DOMContentLoaded', () => {
+      qrCode = new QRCodeStyling({
+        width: 256,
+        height: 256,
+        data: "https://orbitt.sbs",
+        dotsOptions: {
+          color: "#7f5af0",
+          type: "rounded"
+        },
+        backgroundOptions: {
+          color: "#121212"
+        },
+        imageOptions: {
+          crossOrigin: "anonymous",
+          margin: 5
+        }
+      });
+
+      qrCode.append(document.getElementById("qr-code"));
+
+      document.getElementById("generate-btn").addEventListener("click", () => {
+        const input = document.getElementById("qr-input").value.trim();
+        if (!input) {
+          alert("Please enter some text or URL to generate QR code.");
+          return;
+        }
+        qrCode.update({ data: input });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="sidebar">
+    <input placeholder="Ctrl+E, Ctrl+K, or / to search..." id="searchbar" />
+    <a href="./aboutblank.html">About:blank embed</a>
+    <a href="./base64.html">Base64 Converter</a>
+    <a href="./browserinfo.html">Browser Info</a>
+    <a href="./coinflip.html">Coinflip</a>
+    <a href="./time.html">Current Time</a>
+    <a href="./randomnumber.html">Number Generator</a>
+    <a href="./pomodoro.html">Pomodoro Timer</a>
+    <a href="./qrcode.html">QR Code Maker</a>
+    <a href="./reactiontime.html">Reaction Time</a>
+    <a href="./urlopen.html">URL Opener</a>
+    <a href="./useragent.html">User Agent</a>
+    <div id="sidebarfooter">
+      <p>Made with 💜 and my own two hands.</p>
+    </div>
+  </div>
+  <main>
+    <h1>QR Code Maker</h1>
+    <p>Enter any URL or text to generate a QR code:</p>
+    <div class="qrcode-container">
+      <input type="text" id="qr-input" placeholder="Enter URL or text here" />
+      <button id="generate-btn">Generate QR Code</button>
+      <div id="qr-code"></div>
+    </div>
+  </main>
+</body>
+</html>

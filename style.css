@@ -1,0 +1,188 @@
+/* 🌙 Dark Cottagecore + Right-Floated Image Layout */
+
+body {
+    background-color: #1e1b2f;
+    color: #e7d9f5;
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2d243f;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    transform: skew(-15deg);
+    margin: 0 1em;
+    color: #caa9e0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.navbar li:hover{
+    color: #7696ff;
+    transform: skew(0deg);
+}
+
+/* Status iframe */
+.status {
+    background-color: #2a203a;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #865ba5;
+}
+
+.status iframe {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3a2e50;
+}
+
+/* Layout: main + right banner */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+
+/* Main content container */
+main {
+    background-color: #2a203a;
+    border: 2px solid #865ba5;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(138, 77, 204, 0.3);
+    flex: 0 1 960px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Sidebar image on the right */
+.extra {
+    flex: 0 0 auto;
+}
+
+.vbanner {
+    display: block;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(138, 77, 204, 0.2);
+}
+
+/* Fieldsets and text */
+fieldset {
+    background-color: #2e2442;
+    border: 1px solid #a173c8;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+legend {
+    color: #caa9e0;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+h1.float-title {
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem;
+    color: #d8b4ff;
+}
+
+.subheader {
+    font-size: 1rem;
+    color: #bfa3d9;
+}
+
+.small {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(138, 77, 204, 0.2);
+}
+
+iframe {
+    width: 100%;
+    height: 120px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3a2e50;
+}
+
+.footertext {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+    color: #a888cc;
+}
+
+/* Responsive stacking */
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vbanner {
+        margin-top: 1.5rem;
+    }
+}
+
+.hbanner{
+    width: 850px;
+    height: auto;
+}
+
+/* 🌒 Custom Scrollbar Styling – Dark Cottagecore Theme */
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2a203a;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #865ba5;
+    border-radius: 10px;
+    border: 2px solid #2a203a;
+    box-shadow: inset 0 0 5px rgba(138, 77, 204, 0.4);
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a173c8;
+}
+
+/* Firefox Support */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #865ba5 #2a203a;
+}

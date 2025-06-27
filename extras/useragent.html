@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <title>Orbitt extras.</title>
+  <link rel="stylesheet" href="extras.css" />
+  <style>
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+    .info {
+      background-color: var(--sidebar-bg);
+      border-radius: var(--border-radius);
+      padding: 20px;
+      font-size: 1.2rem;
+      color: var(--text-color);
+      user-select: all;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
+  <script defer>
+    function detectBrowser(userAgent) {
+      userAgent = userAgent.toLowerCase();
+      if (userAgent.includes('firefox')) return 'Mozilla Firefox';
+      if (userAgent.includes('edg')) return 'Microsoft Edge';
+      if (userAgent.includes('opr') || userAgent.includes('opera')) return 'Opera';
+      if (userAgent.includes('chrome') && !userAgent.includes('edg') && !userAgent.includes('opr')) return 'Google Chrome Or a  Chrome Based Browser';
+      if (userAgent.includes('safari') && !userAgent.includes('chrome')) return 'Apple Safari';
+      if (userAgent.includes('msie') || userAgent.includes('trident')) return 'Internet Explorer';
+      return 'Unknown Browser';
+    }
+
+    function detectOS(userAgent) {
+      const ua = userAgent.toLowerCase();
+      if (ua.includes('windows nt 10.0')) return 'Windows 10';
+      if (ua.includes('windows nt 6.3')) return 'Windows 8.1';
+      if (ua.includes('windows nt 6.2')) return 'Windows 8';
+      if (ua.includes('windows nt 6.1')) return 'Windows 7';
+      if (ua.includes('windows nt 6.0')) return 'Windows Vista';
+      if (ua.includes('windows nt 5.1') || ua.includes('windows xp')) return 'Windows XP';
+      if (ua.includes('macintosh') || ua.includes('mac os x')) return 'macOS';
+      if (ua.includes('android')) return 'Android';
+      if (ua.includes('iphone') || ua.includes('ipad') || ua.includes('ipod')) return 'iOS';
+      if (ua.includes('linux')) return 'Linux';
+      return 'Unknown OS';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const uaString = navigator.userAgent;
+      const browser = detectBrowser(uaString);
+      const os = detectOS(uaString);
+
+      document.getElementById('user-agent').textContent = uaString;
+      document.getElementById('browser').textContent = browser;
+      document.getElementById('os').textContent = os;
+    });
+  </script>
+</head>
+<body>
+  <div class="sidebar">
+    <input placeholder="Ctrl+E, Ctrl+K, or / to search..." id="searchbar" />
+    <a href="./aboutblank.html">About:blank embed</a>
+    <a href="./base64.html">Base64 Converter</a>
+    <a href="./browserinfo.html">Browser Info</a>
+    <a href="./coinflip.html">Coinflip</a>
+    <a href="./time.html">Current Time</a>
+    <a href="./randomnumber.html">Number Generator</a>
+    <a href="./pomodoro.html">Pomodoro Timer</a>
+    <a href="./qrcode.html">QR Code Maker</a>
+    <a href="./reactiontime.html">Reaction Time</a>
+    <a href="./urlopen.html">URL Opener</a>
+    <a href="./useragent.html">User Agent</a>
+    <div id="sidebarfooter">
+      <p>Made with 💜 and my own two hands.</p>
+    </div>
+  </div>
+  <main>
+    <h1>User Agent Info</h1>
+    <p><strong>Your Browser:</strong> <span id="browser">Detecting...</span></p>
+    <p><strong>Your Operating System:</strong> <span id="os">Detecting...</span></p>
+    <h2>Your Full User Agent String:</h2>
+    <div class="info" id="user-agent">Loading...</div>
+  </main>
+</body>
+</html>
