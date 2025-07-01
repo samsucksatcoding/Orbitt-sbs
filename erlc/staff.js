@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //"userid": "rank", (comma only if theres another following.)
     const staffRanks = {
         "5806093947": "Owner",
+        "1005132725": "Co-Owner",
         "1": "Placeholder"
         // Add more staff userIds here if needed
     };
