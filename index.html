@@ -1,60 +1,64 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>orbitt</title>
-        <meta charset="utf-8">
-        <meta property="og:title" content="orbitt(dot)sbs"/>
-        <meta property="og:description" content="hi i'm orbitt, a front end web developer. i like coffee, monster, cats, and coding (sometimes)."/>
-        <meta property="og:image" content="https://orbitt.sbs/assets/images/overview.png"/>
-        <meta property="og:url" content="https://orbitt.sbs"/>
-        <meta property="og:type" content="website"/>
-        <meta name="theme-color" content="#8A2BE2"/>
-    </head>
-    <body>
-        <div class="navbar">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Orbitt</title>
+    <meta name="description" content="Welcome to the official site of Orbitt — developer, designer, and tech enthusiast. Explore my projects, tools, and creations.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Orbitt | Developer, Designer, Tech Geek">
+    <meta property="og:description" content="I'm a front-end web developer, graphic designer, plane geek, and history nerd.">
+    <meta property="og:url" content="index.html">
+    <meta property="og:image" content="./assets/images/banner.gif">
+    <meta property="og:site_name" content="Orbitt">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Orbitt | Developer, Designer, Tech Geek">
+    <meta name="twitter:description" content="I'm a front-end web developer, graphic designer, plane geek, and history nerd.">
+    <meta name="twitter:image" content="./assets/images/banner.gif">
+
+    <script defer src="./scripts.js"></script>
+</head>
+<body>
+    <div class="tooltip">
+        <p>Tooltip Placeholder...</p>
+    </div>
+
+    <div class="cont1">
+        <nav id="navbar">
             <ul>
+                <h2>~$ Nav</h2>
                 <li onclick="window.location.href='./index.html'">Home</li>
-                <li onclick="window.location.href='./projects.html'">Projects</li>
-                <li onclick="window.location.href='./friends.html'">Friends</li>
-                <li onclick="window.location.href='./comingsoon.html'">Blog</li>
-                <li onclick="window.location.href='./webrings.html'">Webrings</li>
-                <li onclick="window.location.href='./extras/extras.html'">Extras</li>
+                <li onclick="window.location.href='./ab.htm'">About Me</li>
+                <li onclick="window.location.href='./frnd.htm'">Friends</li>
+                <li onclick="window.location.href='./prj.htm'">Projects</li>
+                <li onclick="window.location.href='./tools.html'">Tools</li>
             </ul>
-        </div>
+        </nav>
 
-        <div id="status" class="status">
-            <iframe src="./iframes/status.html" frameborder="0"></iframe>
-        </div>
+        <div class="content">
+            <header id="header">
+                <img src="./assets/images/banner.gif" alt="Banner">
+                <h1>Heya! I'm Orbitt!</h1>
+                <p>I like coffee, monster, cats, coding <em>(sometimes)</em> and <a href="./ab.htm">more</a>!</p>
+            </header>
 
-        <div class="content-wrapper">
-            <main>
-                <div class="maincontent">
-                    <div class="header">
-                        <fieldset>
-                            <legend>home</legend>
-                            <img src="./assets/images/hbanner.jpg" alt="car" class="hbanner">
-                            <h1>Welcome!</h1>
-                            <h3 class="subheader">hi i'm orbitt, a front end <span id="age">calculating</span>y/o web developer.
-                            i like coffee, monster, cats, and coding <em class="small">sometimes</em>.</h3>
-                        </fieldset>
-                    </div>
-                    <div class="bodycontent">
-                        <fieldset>
-                            <legend>my button</legend>
-                            <iframe src="./iframes/button.html" frameborder="0"></iframe>
-                        </fieldset>
-                    </div>
-                    <div class="footertext">
-                        <p>press ctrl+shift+r<br>
-                        if the page doesn't load properly.</p>
-                    </div>
-                </div>
+            <main id="webrings">
+                <iframe
+                    id="bucket-webring"
+                    style="width: 100%; height: 3rem; border: none;"
+                    src="https://webring.bucketfish.me/embed.html?name=sam"
+                ></iframe>
             </main>
 
-            <div class="extra">
-                <img src="./assets/images/vbanner.png" alt="me :3c" class="vbanner">
-            </div>
+            <footer id="footer">
+                <p>Copyright&copy; 2025 Sam White. All rights reserved.</p>
+                <hr>
+                <a href="./smap.htm">Sitemap</a>
+            </footer>
         </div>
-    </body>
+    </div>
+</body>
 </html>
