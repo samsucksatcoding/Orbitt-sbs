@@ -1,97 +1,128 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-html, body{
-    height: 100%;
-    background-color: #0e0e0e;
-    color: #fff;
-    font-family: monospace;
-    overflow-x: hidden;
-}
-.cont1{
-    display: flex;
-    height: 93vh;
-    flex-direction: row;
-}
-nav{
-    min-width: 200px;
-    padding: 10px 15px;
-    background-color: #1b1b1b;
-    border: 2px solid #313131;
-    border-radius: 20px;
-    margin: 10px;
-}
-nav ul{
-    list-style: none;
-}
-nav ul li{
-    color: rgb(24, 85, 255);
-    transform: skew(-15deg);
-    transition: 0.3s ease;
-    font-size: 18px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-a{
-    color: rgb(24, 85, 255);
-    transform: skew(-15deg);
-    transition: 0.3s ease;
-    font-size: 18px;
-    margin-bottom: 10px;
-    cursor: pointer;
+/* Androgynous Ether Preset + Orbitt Site Base */
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;700&display=swap');
+
+:root {
+  --bg: #0e0c1b;
+  --fg: #e0d0ff;
+  --accent: #7159d9;
+  --soft-accent: #9e8eff;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Cormorant Garamond', serif;
 }
-a:hover{
-    transform: skew(0deg);
-    color: rgb(83, 152, 255);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-nav ul li:hover{
-    transform: skew(0deg);
-    color: rgb(83, 152, 255);
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  padding: 2em;
+  transition: background 0.5s, color 0.5s;
 }
-.content{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
 }
-img{
-    border-radius: 20px;
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
 }
-header, main, footer{
-    background-color: #1b1b1b;
-    border: 2px solid #313131;
-    border-radius: 20px;
-    width: 715px;
-    padding: 10px 15px;
-    margin: 0 auto;
+
+nav li {
+  cursor: pointer;
+  color: var(--soft-accent);
+  font-weight: bold;
+  transition: color 0.3s;
 }
-.tooltip{
-    background-color: #1b1b1b;
-    border: 2px solid #313131;
-    border-radius: 20px;
-    padding: 10px;
-    display: none;
-    position: fixed;
-    z-index: 999;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+
+nav li:hover {
+  color: var(--accent);
 }
-@media (max-width: 768px){
-    .cont1{
-        flex-direction: column;
-        height: auto;
-    }
-    nav{
-        width: auto;
-        max-width: 100%;
-        margin: 10px;
-    }
-    .content{
-        width: 100%;
-    }
+
+main {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5em;
+}
+
+main img {
+  width: 256px;
+  height: 256px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  color: var(--soft-accent);
+  font-weight: 600;
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.1em;
+  max-width: 600px;
+}
+
+span.rolling {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+span.username {
+  color: var(--soft-accent);
+  font-style: italic;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  font-family: var(--font-body);
+  border: none;
+  border-radius: 1em;
+  padding: 0.6em 1.4em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+button:hover {
+  background: var(--soft-accent);
+  transform: translateY(-2px);
+}
+
+a {
+  color: var(--soft-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

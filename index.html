@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
     <head>
-        <title>Orbitt.sbs</title>
+        <title>Orbitt</title>
         <link rel="stylesheet" href="style.css">
+        <script defer src="./scripts.js"></script>
     </head>
     <body>
-        <h1>WIP.</h1>
+        <nav>
+            <ul>
+                <li onclick="window.location.href='./index.html'">Home</li>
+                <li onclick="window.location.href='./projects.html'">Projects</li>
+                <li onclick="window.location.href='./friends.html'">Friends</li>
+            </ul>
+        </nav>
+        <main>
+            <!--Image aligned left, 50px border radius 256x256px scale-->
+            <img src="./images/Sakura.png" alt="Me x3">
+            <h1>Heyo! I'm <span class="rolling" id="name">...</span></h1>
+            <p>A little about me I guess...</p>
+            <p>I am a <span class="rolling" id="age">16</span> year old web developer, I listen to
+                <span class="rolling" id="musicgenre">...</span> on a daily basis. I code in
+                <span class="rolling" id="programming-languages">...</span> my discord username is
+                <span class="username" id="discorduser">...</span></p>
+        </main>
     </body>
 </html>
