@@ -1,27 +1,51 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Orbitt</title>
-        <link rel="stylesheet" href="style.css">
-        <script defer src="./scripts.js"></script>
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li onclick="window.location.href='./index.html'">Home</li>
-                <li onclick="window.location.href='./projects.html'">Projects</li>
-                <li onclick="window.location.href='./friends.html'">Friends</li>
-            </ul>
-        </nav>
-        <main>
-            <!--Image aligned left, 50px border radius 256x256px scale-->
-            <img src="./images/Sakura.png" alt="Me x3">
-            <h1>Heyo! I'm <span class="rolling" id="name">...</span></h1>
-            <p>A little about me I guess...</p>
-            <p>I am a <span class="rolling" id="age">16</span> year old web developer, I listen to
-                <span class="rolling" id="musicgenre">...</span> on a daily basis. I code in
-                <span class="rolling" id="programming-languages">...</span> my discord username is
-                <span class="username" id="discorduser">...</span></p>
-        </main>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orbitt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li>These Are Useless, Go Elsewhere.</li>
+            <li>Home</li>
+            <li>Friends</li>
+            <li>Projects</li>
+            <li>Etc.</li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="profile-card">
+            <fieldset>
+                <legend>Hero Card</legend>
+                <div class="profile-image"><img src="./images/sakura.png" alt="Sakura Logo"></div>
+                <h1>SAM</h1>
+                <h2>Front-End Web Developer</h2>
+            </fieldset>
+        </div>
+        <div class="profile-card">
+            <fieldset>
+                <legend>About Me</legend>
+                <h1>ABOUT ME</h1>
+                <h2>I'm too lazy to make a whole new element for ts.</h2>
+                <p>I am a front-end web developer, I am 16 years old, I make games on roblox sometimes for fun, I play Portal,
+                    Portal 2, Minecraft, and Roblox. I watch anime occasionally, I've just finished Fate/Apocrypha, and I am now on
+                    Chainsaw Man.</p>
+                <p style="font-size: 10px;">Yes I'm a femboy x3</p>
+            </fieldset>
+        </div>
+        <div class="profile-card">
+            <fieldset>
+                <legend>Webrings</legend>
+                <h1>WEBRINGS</h1>
+                <h2>I'm still lazy asf .-.</h2>
+                <p><em>*cough*</em></p>
+                <script src="https://palette.nekoweb.org/pmoring.js" data-type="noir-inverse"/></script>
+                <iframe id="bucket-webring" style="width: 100%; height: 3rem; border: none;" src="https://webring.bucketfish.me/embed.html?name=sam"></iframe>
+            </fieldset>
+        </div>
+    </main>
+</body>
 </html>

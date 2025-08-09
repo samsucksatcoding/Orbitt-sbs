@@ -1,128 +1,90 @@
-/* Androgynous Ether Preset + Orbitt Site Base */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;700&display=swap');
-
-:root {
-  --bg: #0e0c1b;
-  --fg: #e0d0ff;
-  --accent: #7159d9;
-  --soft-accent: #9e8eff;
-  --font-body: 'Inter', sans-serif;
-  --font-heading: 'Cormorant Garamond', serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background: var(--bg);
-  color: var(--fg);
-  font-family: var(--font-body);
-  line-height: 1.6;
-  padding: 2em;
-  transition: background 0.5s, color 0.5s;
+    background-color: #0e0e0e;
+    color: #efefef;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2em;
+/* Sidebar Navigation */
+.sidebar {
+    width: 200px;
+    background-color: #141414;
+    height: 100vh;
+    padding-top: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2em;
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav li {
-  cursor: pointer;
-  color: var(--soft-accent);
-  font-weight: bold;
-  transition: color 0.3s;
+.sidebar li {
+    padding: 15px 20px;
+    cursor: pointer;
 }
 
-nav li:hover {
-  color: var(--accent);
+.sidebar li:hover {
+    background-color: #1f1f1f;
 }
 
-main {
-  max-width: 800px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1.5em;
+/* Main Content */
+.content {
+    margin-left: 200px;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 200px);
 }
 
-main img {
-  width: 256px;
-  height: 256px;
-  border-radius: 50px;
-  object-fit: cover;
+/* Profile Card */
+.profile-card {
+    width: 700px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    border: 2px solid #444;
+    padding: 20px;
+}
+
+legend {
+    padding: 0 10px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 4px;
+    margin: 0 auto 15px;
+}
+
+.profile-image img {
+    width: 100px;
+    border-radius: 4px;
 }
 
 h1 {
-  font-family: var(--font-heading);
-  color: var(--soft-accent);
-  font-weight: 600;
-  font-size: 2.5em;
+    text-align: center;
+    margin: 0;
 }
 
-p {
-  font-size: 1.1em;
-  max-width: 600px;
-}
-
-span.rolling {
-  color: var(--accent);
-  font-weight: bold;
-}
-
-span.username {
-  color: var(--soft-accent);
-  font-style: italic;
-}
-
-button {
-  background: var(--accent);
-  color: white;
-  font-family: var(--font-body);
-  border: none;
-  border-radius: 1em;
-  padding: 0.6em 1.4em;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 0 10px var(--accent);
-}
-
-button:hover {
-  background: var(--soft-accent);
-  transform: translateY(-2px);
-}
-
-a {
-  color: var(--soft-accent);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+h2 {
+    text-align: center;
+    font-weight: normal;
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #ccc;
 }
