@@ -1,112 +1,19 @@
-html, body {
-	font-family: "Dongle", monospace;
-    font-size: 25px;
-	line-height: 1;
-	height: 100%;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bubbles Goo Effect - Fixed Background</title>
+<style>
+  html, body {
+    font-family: 'Dongle', sans-serif;
     margin: 0;
     padding: 0;
-}
-.multicolor {
-    background-image: linear-gradient(to right, #a378f3, #af4254);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-}
-.button-colors{
-    background-image: linear-gradient(to right, #a378f3, #af4254);
-	border: none;
-	padding: 10px;
-	border-radius: 5px;
-	font-family: "Dongle", monospace;
-	font-size: 20px;
-	line-height: 1;
-	color: #fff;
-	transition: all 0.3s ease;
-}
-.button-colors:hover{
-	transform: translateY(-5px);
-	box-shadow: 0 4px 10px #ff5d5d;
-}
-.large{
-	color: #9f76ff;
-	font-size: 60px;
-}
-nav {
-    text-align: center;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.45);
-    padding: 5px 0;
-    margin-bottom: 10px;
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    background-color: #44444400;
-    border-radius: 10px;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-nav ul li a:hover {
-    color: rgba(200, 200, 200, 0.8);
-    background-color: #444;
-}
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 60px);
-    padding: 0 10px;
-    margin: 0 auto;
-}
-.card {
-    margin: 10px;
-    width: 600px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(49, 49, 49, 0.25);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow:
-        0 4px 30px rgba(0, 0, 0, 0.1),
-        inset 0 0 60px rgba(27, 27, 27, 0.1);
-    color: #ffffff;
-    background-image:
-        linear-gradient(135deg, rgba(58, 58, 58, 0.15), rgba(27, 27, 27, 0.15));
-    transition: all 0.3s ease;
-}
-.card:hover {
-    background-image:
-        linear-gradient(135deg, rgba(37, 37, 37, 0.3), rgba(24, 24, 24, 0.3));
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow:
-        0 8px 40px rgba(0, 0, 0, 0.15),
-        inset 0 0 80px rgba(19, 19, 19, 0.15);
-}
-.layout{
-	display: flex;
-}
-.l1{
-	padding: 2px;
-	text-align: center;
-}
-.l1 img{
-	width: 128px;
-}
-.l2{
-	padding: 5px;
-}
-.gradient-bg {
+    height: 100%;
+  }
+
+  /* Fixed gooey bubble background stays behind all content */
+  .gradient-bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -114,16 +21,19 @@ main {
     height: 100vh;
     overflow: hidden;
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-    z-index: -1;
-}
-.gradient-bg svg {
+    z-index: -1; /* behind everything */
+  }
+
+  /* SVG for goo filter */
+  .gradient-bg svg {
     position: fixed;
     top: 0;
     left: 0;
     width: 0;
     height: 0;
-}
-:root {
+  }
+
+  :root {
     --color-bg1: rgb(108, 0, 162);
     --color-bg2: rgb(0, 17, 82);
     --color1: 18, 113, 255;
@@ -134,8 +44,9 @@ main {
     --color-interactive: 140, 100, 255;
     --circle-size: 80%;
     --blending: hard-light;
-}
-@keyframes moveInCircle {
+  }
+
+  @keyframes moveInCircle {
     0% {
       transform: rotate(0deg);
     }
@@ -145,8 +56,9 @@ main {
     100% {
       transform: rotate(360deg);
     }
-}
-@keyframes moveVertical {
+  }
+
+  @keyframes moveVertical {
     0% {
       transform: translateY(-50%);
     }
@@ -156,8 +68,9 @@ main {
     100% {
       transform: translateY(-50%);
     }
-}
-@keyframes moveHorizontal {
+  }
+
+  @keyframes moveHorizontal {
     0% {
       transform: translateX(-50%) translateY(-10%);
     }
@@ -167,13 +80,17 @@ main {
     100% {
       transform: translateX(-50%) translateY(-10%);
     }
-}
-.gradients-container {
+  }
+
+  /* The container for all bubble gradients with goo filter + blur */
+  .gradients-container {
     filter: url(#goo) blur(40px);
     width: 100%;
     height: 100%;
-}
-.g1 {
+  }
+
+  /* Each bubble gradient */
+  .g1 {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
@@ -184,8 +101,9 @@ main {
     transform-origin: center center;
     animation: moveVertical 30s ease infinite;
     opacity: 1;
-}
-.g2 {
+  }
+
+  .g2 {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
@@ -196,8 +114,9 @@ main {
     transform-origin: calc(50% - 400px);
     animation: moveInCircle 20s reverse infinite;
     opacity: 1;
-}
-.g3 {
+  }
+
+  .g3 {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
@@ -208,8 +127,9 @@ main {
     transform-origin: calc(50% + 400px);
     animation: moveInCircle 40s linear infinite;
     opacity: 1;
-}
-.g4 {
+  }
+
+  .g4 {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
@@ -220,8 +140,9 @@ main {
     transform-origin: calc(50% - 200px);
     animation: moveHorizontal 40s ease infinite;
     opacity: 0.7;
-}
-.g5 {
+  }
+
+  .g5 {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
@@ -232,8 +153,9 @@ main {
     transform-origin: calc(50% - 800px) calc(50% + 200px);
     animation: moveInCircle 20s ease infinite;
     opacity: 1;
-}
-.interactive {
+  }
+
+  .interactive {
     position: absolute;
     background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
@@ -242,12 +164,14 @@ main {
     top: -50%;
     left: -50%;
     opacity: 0.7;
-}
-.text-container {
+  }
+
+  /* Text container scrolls normally on top */
+  .text-container {
     position: relative;
     z-index: 100;
     width: 100vw;
-    min-height: 150vh;
+    min-height: 150vh; /* so you can scroll and see background stay fixed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,4 +182,65 @@ main {
     text-shadow: 1px 1px rgba(0,0,0,0.1);
     padding: 2rem;
     box-sizing: border-box;
-}
+  }
+</style>
+</head>
+<body>
+
+<div class="text-container">
+  Bubbles<br><br>
+  Scroll down to see the background stay fixed behind the text.<br><br>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur suscipit augue, at congue nibh convallis in. Praesent dapibus.
+</div>
+
+<div class="gradient-bg">
+  <svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 18 -8
+        " result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
+    </defs>
+  </svg>
+  <div class="gradients-container">
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3"></div>
+    <div class="g4"></div>
+    <div class="g5"></div>
+    <div class="interactive"></div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const interBubble = document.querySelector('.interactive');
+    let curX = 0;
+    let curY = 0;
+    let tgX = 0;
+    let tgY = 0;
+
+    function move() {
+      curX += (tgX - curX) / 20;
+      curY += (tgY - curY) / 20;
+      interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+      requestAnimationFrame(move);
+    }
+
+    window.addEventListener('mousemove', (event) => {
+      tgX = event.clientX;
+      tgY = event.clientY;
+    });
+
+    move();
+  });
+</script>
+
+</body>
+</html>

@@ -1,23 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
-        <title>Orbitt</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+        <script defer src="scripts.js"></script>
         <link rel="stylesheet" href="style.css">
-        <script defer src="./projects.js"></script>
+        <title>Orbitt</title>
+        <meta name="title" content="Orbitt">
+        <meta name="description" content="Orbitt, I'm a tech nerd, graphic designer, and aviation geek.">
+        <meta charset="utf-8">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://orbitt.sbs/">
+        <meta property="og:title" content="Orbitt">
+        <meta property="og:description" content="Orbitt, I'm a tech nerd, graphic designer, and aviation geek.">
+        <meta property="og:image" content="https://orbitt.sbs/assets/og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://orbitt.sbs/">
+        <meta name="twitter:title" content="Orbitt">
+        <meta name="twitter:description" content="Orbitt, I'm a tech nerd, graphic designer, and aviation geek.">
+        <meta name="twitter:image" content="https://orbitt.sbs/assets/og-image.jpg">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li onclick="window.location.href='./index.html'">Home</li>
-                <li onclick="window.location.href='./projects.html'">Projects</li>
-                <li onclick="window.location.href='./friends.html'">Friends</li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./projects.html" class="active">Projects</a></li>
+            <li><a href="./friends.html">Friends</a></li>
+            <li><a href="#">Tools</a></li>
+        </ul>
+    </nav>
         <main>
-            <h1>Current Projects</h1>
-            <ul id="projects">
-                <li>Loading...</li>
-            </ul>
+            <div class="fscard">
+                <fieldset class="card">
+                    <div class="4cards">
+                        <div class="proj-card">
+                            <img src="./images/placeholder.png" alt="Placeholder Image">
+                            <hr>
+                            <h3>Project</h3>
+                            <p>Brief Description up to 100 chars.</p>
+                            <button>View now!</button>
+                        </div>
+                        <div class="proj-card">
+                            <img src="./images/placeholder.png" alt="Placeholder Image">
+                            <hr>
+                            <h3>Project</h3>
+                            <p>Brief Description up to 100 chars.</p>
+                            <button>View now!</button>
+                        </div>
+                        <div class="proj-card">
+                            <img src="./images/placeholder.png" alt="Placeholder Image">
+                            <hr>
+                            <h3>Project</h3>
+                            <p>Brief Description up to 100 chars.</p>
+                            <button>View now!</button>
+                        </div>
+                        <div class="proj-card">
+                            <img src="./images/placeholder.png" alt="Placeholder Image">
+                            <hr>
+                            <h3>Project</h3>
+                            <p>Brief Description up to 100 chars.</p>
+                            <button>View now!</button>
+                        </div>
+                        
+                    </div>
+                </fieldset>
+            </div>
         </main>
+        
+        <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="
+                    1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 18 -8
+                  " result="goo" />
+                  <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+              </defs>
+            </svg>
+            <div class="gradients-container">
+              <div class="g1"></div>
+              <div class="g2"></div>
+              <div class="g3"></div>
+              <div class="g4"></div>
+              <div class="g5"></div>
+              <div class="interactive"></div>
+            </div>
+        </div>
     </body>
 </html>
