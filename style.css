@@ -259,3 +259,37 @@ main {
     padding: 2rem;
     box-sizing: border-box;
 }
+.cards4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    max-width: 630px;
+    margin: 0 auto;
+}
+.proj-card {
+    flex: 0 0 calc(50% - 15px);
+    box-sizing: border-box;
+    background-color: #0000008c;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.proj-card:hover {
+    animation: bounceScale 0.5s ease;
+}
+@keyframes bounceScale {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.1); }
+    60% { transform: scale(0.95); }
+    80% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.proj-card .content{
+    margin: 15px;
+}
+.proj-card img{
+    width: 285px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: #a378f37a solid 4px;
+}
