@@ -12,7 +12,7 @@ async function fetchRepos() {
 async function checkForProjectCard(repoName) {
     const fileNames = ["ProjectCard.png", "ProjectCard.jpg"];
     for (let file of fileNames) {
-        const fileUrl = `https://raw.githubusercontent.com/${GITHUB_USER}/${repoName}/main/${file}`;
+        const fileUrl = `https://raw.githubusercontent.com/${GITHUB_USER}/${repoName}/main/images/${file}`;
         try {
             const res = await fetch(fileUrl, { method: "HEAD" });
             if (res.ok) return fileUrl;
